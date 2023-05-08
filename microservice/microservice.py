@@ -46,10 +46,10 @@ def filter_observations(observations):
         photo_url = observation["photos"][0]["url"] if len(observation["photos"]) > 0 else None
 
         filtered_observation = {
-            "The Common Name": taxon_name,
-            "The URI of the Observation": uri,
-            "Observed Date": observed_on,
-            "A Photo of the Observation": photo_url
+            "name": taxon_name,
+            "uri": uri,
+            "observed_date": observed_on,
+            "photo": photo_url
         }
         filtered_data.append(filtered_observation)
         counter += 1
@@ -59,3 +59,4 @@ def filter_observations(observations):
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
+
