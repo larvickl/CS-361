@@ -2,7 +2,7 @@ import requests
 
 def get_observations(park_name):
     url = 'https://api.inaturalist.org/v1/observations'
-    params = {'q': park_name, 'order_by': 'observed_on'}
+    params = {'q': park_name.lower(), 'order_by': 'observed_on'}
     response = requests.get(url, params=params)
     observations = response.json()['results']
     print(response.json()['results'])
