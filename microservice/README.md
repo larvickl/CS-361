@@ -11,22 +11,27 @@ response = requests.get(url, params=params)
 
 Query Params = park_name
 
-If there is no parameter entered for park_name, {"error": "No park name provided."}.
+If there is no parameter entered for park_name, returns: 
+{
+  "error": "Missing park_name parameter"
+}
 
-The parameter park_name is case-sensitive, as it relies on the iNaturalist API.  
+The parameter park_name is case-sensitive, as it relies on the iNaturalist API.
 
-How to Receive Data: The data will be returned as a collection of 'Observations'.
+How to Receive Data: The data will be returned as a collection of 'Observations'.  An example is below.
+From running the code in a terminal, (after running pip install requests), use the command python microservice.py.  
+The microservice can then be called by sending an HTTP request.
 
-data =
+data :
 [
   {name: example_name, uri: example_uri, observed_date: example_observed_date, photo:
-  example_photo.jpeg},
+  example_photo.jpg},
   {name: example_name, uri: example_uri, observed_date: example_observed_date, photo:
-  example_photo.jpeg},
+  example_photo.jpg},
   {name: example_name, uri: example_uri, observed_date: example_observed_date, photo:
-  example_photo.jpeg},
+  example_photo.jpg},
   {name: example_name, uri: example_uri, observed_date: example_observed_date, photo:
-  example_photo.jpeg},
+  example_photo.jpg},
   {name: example_name, uri: example_uri, observed_date: example_observed_date, photo:
-  example_photo.jpeg}
+  example_photo.jpg}
 ]
