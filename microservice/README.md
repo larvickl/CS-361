@@ -1,6 +1,7 @@
-How to Request Data:
+
 ![2023-05-07](https://user-images.githubusercontent.com/107569872/236730780-bf915a69-70a9-4dba-85a7-75a472ee8a6e.png)
 
+How to Request Data:
 url = 'https://api.inaturalist.org/v1/observations'
 params = {'q': park_name, 'order_by': 'observed_on'}
 response = requests.get(url, params=params)
